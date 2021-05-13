@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        #test{
+            width: 100%;
+            background-color: red;
+            position: fixed;
+            height: 0px;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="test"></div>
+    <script>
+        let mydiv = document.getElementById("test");
+        window.onscroll = function(){
+            // let x = window.pageYOffset;
+
+            // if(x > 200){
+            //     mydiv.style.background = "black";
+            // }
+            // if(x >400){
+            //     mydiv.style.background = "red";
+            // }
+            // if(x >600){
+            //     mydiv.style.background = "pink";
+            // }
+            // if(x >800){
+            //     mydiv.style.background = "green";
+            // }
+            if(window.pageYOffset>200){
+                mydiv.style.height = 300+ "px"; 
+                mydiv.style.background = "red";   
+                // mydiv.style.opacity = 0;
+            }
+
+            if(window.pageYOffset>400){
+                mydiv.style.opacity = 0.3;
+                mydiv.style.background = "purple";  
+            }
+            if(window.pageYOffset>600){
+                mydiv.style.background = "green";
+                 mydiv.style.opacity = 0.7;
+            }
+            if(window.pageYOffset>800){
+                mydiv.style.background = "black";
+            }
+        }
+    </script>
+</body>
+</html>

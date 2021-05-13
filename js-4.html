@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .mydiv{
+           width: 100px;
+           height: 100px;
+           border:2px solid green;
+           transform: rotate(45deg);
+       }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>this is a heading.</h1>
+    </div>
+    <button onclick="creatediv()"> create</button>
+    <button onclick="appendDiv()">change</button>
+    <script>
+        function creatediv(){
+            var mydivs = document.getElementById("content");
+        //   mydivs.innerHTML = "<h1> this is a HEADING</h1>";
+            mydivs.append("<h2> this is a heading 2.</h2>");
+        }
+        function appendDiv(){
+            var mydiv = document.createElement("div");
+           mydiv.style.width="100px";
+           mydiv.style.height="100px";
+           mydiv.style.border="1px solid black";
+           mydiv.style.borderRadius="50px";
+           mydiv.style.background="red";
+        var content = document.createTextNode("content");
+        mydiv.appendChild(content);
+            document.body.append(mydiv);
+        }
+    </script>
+    
+    <!-- <div class="mydiv">
+        dlkjlgjlfkjjdfdlkfjdflkdjf
+    </div>
+    </div> -->
+</body>
+</html>

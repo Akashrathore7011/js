@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+            margin: auto;
+            text-align: center;
+            line-height: 4;
+            font-size: 30px;
+
+        
+        } */
+        #clock{
+          width: 100px;
+          height: 100px;
+          background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+    <!-- <button onclick="start()">click</button> -->
+    <!-- <button onclick="startTimer()">startTimer</button> -->
+     <script>
+        //  let i=0;
+        //  let myclock= document.getElementById("clock");
+        //    function startTimer(){ 
+        //        setInterval (function(){
+        //        myclock.innerText = i; i++;
+        //     } ,1000)}
+            //    console.log(i);
+
+        //  for(let a=0; a<100; a++ ){
+        //      console.log(a+1);
+             
+        //  }
+        //  let b=0;
+        //  while( b<100 ){
+        //      console.log(b+1);
+        //      b++;
+        //  }
+        //   let arr = [2,4,6,8,6,3,12,6];
+        //   arr.forEach(function(element){
+        //       console.log(element);
+        //   });
+
+        //   let myobt = {
+        //     name  :'akash',
+        //     course: 'webdesigning',
+        //     marks :[33,4,5,7,4,3]
+        // }
+        // for(let key in myobt){
+        //     console.log(myobt[key]);
+        // }
+
+        //    let i=0;  
+        //     let myclock = document.getElementById("clock");
+        //     function start(){
+        //     setInterval(
+        //        function(){
+        //       myclock.innerHTML = i; i++;
+        //        }, 1000)}
+
+        let a = 0;
+        
+        setInterval(anim,1000){
+            function anim(){
+            a =a+10;}
+            let mydiv = document.getElementById("clock");
+            mydiv.style.marginLeft = a+'px';
+        }
+     </script>
+</body>
+</html>

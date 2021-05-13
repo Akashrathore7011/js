@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #box{
+            width: 50%;
+            height: 500px;
+            background-color: red;
+            float: right;
+        }
+        #input_box{
+            float: left;
+            width: 30%;
+            height: 100px;
+        
+        }
+        ::placeholder{
+            font-size : 50px;
+        }
+        button{
+            width: 200px;
+            height: 100px;
+            font-size: 50px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+    <input type="text" id="input_box" name="input_box" placeholder="text here">
+    <button onclick="checkvalue()"> click</button>
+    <script>
+        let myInput = document.getElementById("input_box");
+        let mydiv = document.getElementById("box");
+        function checkvalue(){
+            if(myInput.value == 1){
+                mydiv.style.backgroundColor = "green";
+
+            }
+           else if(myInput.value == 2 ){
+                mydiv.style.backgroundColor = "yellow";
+
+            }
+          else   if(myInput.value == 3){
+                mydiv.style.backgroundColor = "black";
+
+            }
+            else{
+                mydiv.style.backgroundColor = "purple"
+            }
+        }
+
+    </script>
+</body>
+</html>

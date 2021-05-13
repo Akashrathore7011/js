@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .accord{
+            background-color: rgb(228, 222, 222);
+            width: 100%;
+            padding:  15px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 18px;
+            border: none;
+            outline: none;
+        }
+        .active{
+            background-color: skyblue;
+            border-bottom: 5px solid gray;
+        }
+        .accord:hover{
+            background-color: rgb(187, 185, 185);
+        }
+        .panel{
+            display: none;
+            padding: 0 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="accord">section 1</button>
+    <div class="panel">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, perspiciatis. Sit iste nam sunt aut ex quis
+            tempora possimus velit, officia minima voluptatibus debitis eius repudiandae similique expedita facere
+            dolorum voluptas quia asperiores laudantium! Ratione sapiente, soluta vero minima nihil eius, possimus sunt
+            incidunt impedit optio, commodi earum. Rerum, aperiam?
+        </p>
+    </div>
+    <button class="accord">section 2</button>
+    <div class="panel">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, perspiciatis. Sit iste nam sunt aut ex quis
+            tempora possimus velit, officia minima voluptatibus debitis eius repudiandae similique expedita facere
+            dolorum voluptas quia asperiores laudantium! Ratione sapiente, soluta vero minima nihil eius, possimus sunt
+            incidunt impedit optio, commodi earum. Rerum, aperiam?
+        </p>
+    </div>
+    <button class="accord">section 3</button>
+    <div class="panel">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, perspiciatis. Sit iste nam sunt aut ex quis
+            tempora possimus velit, officia minima voluptatibus debitis eius repudiandae similique expedita facere
+            dolorum voluptas quia asperiores laudantium! Ratione sapiente, soluta vero minima nihil eius, possimus sunt
+            incidunt impedit optio, commodi earum. Rerum, aperiam?
+        </p>
+    </div>
+    <script>
+        let acc = document.querySelectorAll('.accord');
+        let i;
+        for( i=0; i<acc.length; i++){
+            acc[i].addEventListener("click",function(){
+                this.classList.toggle("active");
+                let panels = this.nextElementSibling;
+                if( panels.style.display == "block" ){
+                    panels.style.display = "none";  }
+                   else(
+                    panels.style.display = "block"
+                   )
+              
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .banner{
+             position: relative;
+         }
+
+        .images{
+            width: 50%;
+            height: 300px;
+            position: absolute;
+        }
+        .btn{
+            position: absolute;
+            top: 350px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="banner" >
+       <img src="aa.jpg" class="images" alt="">
+       <img src="bb.jpg" class="images" alt="">
+       <img src="cc.jpg" class="images" alt="">
+    </div>
+     <div class="btn">
+       <button onclick = click1()>click</button>
+       <button onclick = click2()>click</button>
+       <button onclick = click3()>click</button>
+     </div>
+    <!-- <div class="banner">
+        <img class="images" src="aa.jpg" alt="">
+        <img class="images" src="bb.jpg" alt="">
+        <img class="images" src="cc.jpg" alt="">
+    </div>
+    <div class="btn">
+        <button onclick="click1()">show1 </button>
+        <button onclick="click2()">show2</button>
+        <button onclick="click3()">show3</button>
+    </div> -->
+    <script>
+        let myImages = document.getElementsByClassName("images");
+          
+         function click1(){
+         myImages[0].style.zIndex = 1;
+         myImages[1].style.zIndex = 0;
+         myImages[2].style.zIndex = 0;
+        }
+        function click2(){
+         myImages[1].style.zIndex = 1;
+         myImages[0].style.zIndex = 0;
+         myImages[2].style.zIndex = 0;
+        }
+        function click3(){
+         myImages[2].style.zIndex = 1;
+         myImages[1].style.zIndex = 0;
+         myImages[0].style.zIndex = 0;
+        }
+        // let i=0;
+        // function toggle(){
+        //     if(i <=2){
+        //         if(myImages[i].style.zIndex = 1){
+        //             myImages[i].style.zIndex =1;
+        //             if(i==0){
+        //                 myImages[1].style.zIndex =0;
+        //                 myImages[2].style.zIndex = 0;
+        //             }
+        //             if(i==1){
+        //                 myImages[2].style.zIndex =0;
+        //                 myImages[0].style.zIndex = 0;
+        //             }
+        //             if(i==2){
+        //                 myImages[0].style.zIndex =0;
+        //                 myImages[1].style.zIndex= 0;
+        //             }
+        //             i=i+1;
+        //         }
+        //     }
+        //     else{
+        //         console.log(i);
+        //         i=0;
+        //     }
+        // }
+        // function click1(){
+        //  myImages[0].style.zIndex = 1;
+        //  myImages[1].style.zIndex = 0;
+        //  myImages[2].style.zIndex = 0;
+        // }
+        // function click2(){
+        //  myImages[1].style.zIndex = 1;
+        //  myImages[0].style.zIndex = 0;
+        //  myImages[2].style.zIndex = 0;
+        // }
+        // function click3(){
+        //  myImages[2].style.zIndex = 1;
+        //  myImages[1].style.zIndex = 0;
+        //  myImages[0].style.zIndex = 0;
+        // }
+
+    </script>
+    
+</body>
+</html>

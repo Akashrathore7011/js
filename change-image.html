@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: relative;
+        }
+        img{
+            position: absolute;
+            width: 50%;
+            height: 300px;
+        }
+      .btn{
+          position: absolute;
+          top:400px;
+      }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+       <img src="aa.jpg" class="image" alt="">
+       <img src="bb.jpg" class="image" alt="">
+       <img src="cc.jpg" class="image" alt="">
+    </div>
+         <div class="btn">
+     <button onclick="show1()">show-1</button>
+     <button onclick="show2()">show-2</button>
+     <button onclick="show3()">show-3</button>
+    </div>
+    <script>
+        let images = document.getElementById("image");
+
+        function show1(){
+            images[0].style.zindex = 1;
+            images[1].style.zindex = 0;
+            images[2].style.zindex = 0;
+        }
+        function show2(){
+            images[1].style.zindex = 1;
+            images[0].style.zindex = 0;
+            images[2].style.zindex = 0;
+        }
+        function show3(){
+            images[2].style.zindex = 1;
+            images[1].style.zindex = 0;
+            images[0].style.zindex = 0;
+        }
+    </script>
+</body>
+</html>

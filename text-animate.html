@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    
+    span{
+        transform: translate( 200px,-180px);
+        display:inline-block;
+        transition: all 1s ease;
+        text-align: center;
+        font-size:100px ;
+      
+    }
+    span.text-ele{
+        transform:translate(210px);
+       }
+    span.text-color{
+        color:red;
+    }
+
+</style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="name">Akash</div>
+    <div class="text-color"></div>
+    <script>
+        let name= document.getElementById("name").innerText;
+        let sepname= name.split('');
+        let divEle = document.getElementById("name");
+        divEle.innerText="";
+
+        for( let i=0; i<sepname.length; i++){
+            divEle.innerHTML += "<span>" +sepname[i]+ "</span>";
+        }
+        let x=0;
+        let aniEle = document.querySelectorAll("span");
+        let animateTime = setInterval(function(){
+            aniEle[x].setAttribute("class","text-ele");
+            x++;
+          if(x== aniEle.length){
+              x=0;
+              stopInt(animateTime);
+          }
+        },500);
+    </script>
+</body>
+</html>

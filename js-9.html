@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let marks = [43,54,6,545,545,423,3434,3434,];
+        let fruits = ['apple','orange','grapes' ];
+        let mixed = [ 'gun','bullets',[3,4,5]];
+
+        // document.write(mixed);
+        console.log(fruits);
+        console.log(marks.length);
+        marks.push(3,6,4);
+        document.write(marks);
+        mixed[0] = 'Aman';
+        console.log(mixed);
+        marks.unshift(44,66,77,22);
+        console.log(marks);
+        // marks.shift();
+        // marks.pop();
+        // marks.push(33,44,555,55);
+        marks.splice(1,3);
+        console.log(marks);
+
+        let myobt = {
+            name  :'akash',
+            course: 'webdesigning',
+            marks :[33,4,5,7,4,3]
+        }
+        document.write(myobt.name);
+        document.write(myobt.course);
+        document.write(myobt.marks);
+
+    </script>
+</body>
+</html>

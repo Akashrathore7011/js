@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="akash">
+
+  </div>
+  <button onclick="green()">green</button>
+  <button onclick="purple()">purple</button>
+  <button onclick="blue()">blue</button>
+  <button onclick="black()">black</button>
+  <button onclick="myshape()">change shape</button>
+
+  <script>
+      let changecolor = document.getElementById("akash");
+      changecolor.style.width= "100px";
+      changecolor.style.height= "100px";
+      changecolor.style.background= "red";
+      function green(){
+          changecolor.style.background = "green";
+        //   changecolor.style.borderRadius = "20px";
+      }
+      function purple(){
+          changecolor.style.background = "purple";
+        //   changecolor.style.borderRadius = "none";
+      }
+      function blue(){
+          changecolor.style.background = "blue";
+        //   changecolor.style.borderRadius = "none";
+      }
+      function black(){
+          changecolor.style.background = "black";
+        //   changecolor.style.borderRadius = "none";
+      }
+      function myshape(){
+          if(changecolor.style.borderRadius== "0px"){
+              changecolor.style.borderRadius = "100%";
+              changecolor.style.marginLeft = "250px";
+            }
+              else{changecolor.style.borderRadius = "0px";
+              changecolor.style.marginLeft = "0px";
+            }
+          }
+        //   changecolor.style.background = "brown";
+        //   changecolor.style.borderRadius = "50px";
+        //   changecolor.style.margin = "auto";
+
+      
+
+  </script>
+</body>
+</html>

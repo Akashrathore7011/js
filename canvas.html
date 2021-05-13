@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <!-- <button onclick="click()">click</button> -->
+    <!-- <button onclick="this.innerHTML=Date()">The time is?</button> -->
+    <!-- <img src="cc.jpg" id="images" width="220" height="280px" alt=""> -->
+    <canvas id="mycanva" width="440" height="400" style="border: 1px solid black;"   ></canvas>
+    <!-- <button onclick="draw()">draw</button> -->
+    <script>
+       window.onload=  function (){
+         let canva = document.getElementById("mycanva");
+         let  canva_d = canva.getContext('2d');
+        //  let img = document.getElementById("images");
+        //  canva_d.drawImage(img, 10 ,10);
+    //     function click(){ 
+    //     let a = new Date();
+    //    document.write(a);}
+
+
+        //  canva_d.fillStyle = "rgb(255,0,0)";
+        //  canva_d.fillRect(20,20,200,250);
+
+        //  canva_d.fillStyle = "rgb(255,90,10)";
+        //  canva_d.fillRect(65,65,50,50);
+         
+        //  canva_d.fillStyle = "rgb(200,60,80)";
+        //  canva_d.arc(80,80,50,0,2*Math.PI,true);
+        //  canva_d.stroke();
+        //  canva_d.fill();            
+
+
+        //  canva_d.fillStyle = "rgb(200,200,200)";
+        //  canva_d.arc(100,100,100,0,2*Math.PI);
+        //  canva_d.stroke();
+        //  canva_d.fill();
+         
+        
+
+        // draw a line)
+        // canva_d.moveTo(0,0);
+        // canva_d.lineTo(50,50);
+        // canva_d.stroke();
+        
+
+        //  (draw a circle)
+        // canva_d.arc(140,140,80,0, 7)
+        //  canva_d.stroke();
+        //  canva_d.fill();
+
+
+        //    Draw a gradient-color -Radial
+        //    let box= canva_d.createRadialGradient(130,90,20,130,130,80);
+        //    box.addColorStop(0,"red");
+        //    box.addColorStop(0.4,"blue");
+        //    box.addColorStop(.7,"skyblue");
+        //    box.addColorStop(1,"purple");
+         
+         
+         
+        //    canva_d.fillStyle = box;
+        //    canva_d.fillRect(10,10,250,250);
+            //   canva_d.arc(50,50,150,0,2*Math.PI);
+
+         
+        //    draw a gradient-color:linear
+        //    let box= canva_d.createLinearGradient(0,0,200,0);
+        //    box.addColorStop(0,"black");
+        // //    box.addColorStop(0.4,"blue");
+        //    box.addColorStop(0.6,"gray");
+        //    box.addColorStop(1,"skyblue");
+
+        //    canva_d.fillStyle = box;
+        //    canva_d.fillRect(30,10,250,180);
+
+        //   draw fill-text
+        // canva_d.font = "30px cursive ";
+        // canva_d.fillText("Hello World", 70, 100); 
+
+        // draw stroke-text
+        // canva_d.font = "30px cursive ";
+        // canva_d.strokeText("Hello World", 70, 100); 
+
+        //  draw-color and align-center text
+        canva_d.font = "30px cursive ";
+        canva_d.fillStyle = "red";
+        canva_d.textAlign = "center";
+        canva_d.fillText("Hello World", canva.width/2,canva.height/2); 
+
+
+        // draw-image
+       
+        
+
+     };
+    //  window.onload = draw();
+    </script>
+</body>
+</html>

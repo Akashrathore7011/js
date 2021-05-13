@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // function guard(gun,bullets,stick){
+
+    //     document.write(gun,'  ',bullets,' ',stick,"<br>");
+    //     console.log(gun,bullets,stick);
+    // }
+    // guard("Ak-47",100,1);
+    let AA = function(gun,bullets,stick){
+        console.log(gun,' ', bullets,'  ', stick);
+        document.write(gun,' ', bullets,'  ', stick);
+    }
+    bb= AA;
+    cc = AA;
+  bb  ("ak-444",300,4+"<br>" );
+    cc ("ak-47",200,555);
+</script>
+</body>
+</html>

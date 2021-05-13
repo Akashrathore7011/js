@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #akash{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="akash"></div>
+    <button onclick="changeposition()">change</button>
+    <button onclick="changesize()">size</button>
+    <script>
+        
+    //      let mydiv = document.getElementById("akash");
+    //      mydiv.style.height = "100px";
+    //      mydiv.style.width = "100px";
+    //      mydiv.style.backgroundColor = "red";
+    //      document.write(mydiv);
+      
+    //     function changeposition(){ 
+    //         mydiv.style.backgroundColor = "green";
+    //      }
+
+    //    function changesize(){
+           
+    //     if(mydiv.style.borderRadius== "0px"){
+    //         mydiv.style.borderRadius = "100%";
+    //         // console.log('this is true');
+
+    //     }
+    //     // if(age == 55){
+    //     //     console.log('this is comman');
+    //     // }
+    //     else{ mydiv.style.borderRadius="0px";
+    //         // console.log('this is false');
+    //     }
+    // }
+    let mydivs = document.getElementById("akash");
+    function changeposition(){
+        mydivs.style.background = "green";
+        mydivs.style.borderRadius = "50%";
+    }
+    function changesize(){
+        if(mydivs.style.borderRadius =="0px"){
+            mydivs.style.borderRadius = "100%";
+        }
+        else{ mydivs.style.borderRadius ="0px";
+            
+        }
+    }
+    
+    </script>
+</body>
+</html>

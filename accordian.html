@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <title>Document</title>
+    <style>
+        .accordian {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            font-size: 15px;
+            transition: 0.4s;
+            border: none;
+            outline: none;
+        }
+
+        .active,
+        .accordian:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="accordian"> <i class="fas fa-chevron-right"></i>Section 1 </button>
+    <div class="panel">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate ducimus magni quas et obcaecati delectus
+            quasi vel, veniam, repellat dicta magnam, odit odio. Voluptatibus, consequuntur? Molestias repellendus
+            consectetur labore vero, rerum quae maxime nihil! Nobis exercitationem praesentium id blanditiis nostrum
+            asperiores repellendus delectus atque rerum ex tempore aliquid, distinctio maiores?</p>
+    </div>
+    <button class="accordian"> <i class="fas fa-chevron-right"></i>Section 2 </button>
+    <div class="panel">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate ducimus magni quas et obcaecati delectus
+            quasi vel, veniam, repellat dicta magnam, odit odio. Voluptatibus, consequuntur? Molestias repellendus
+            consectetur labore vero, rerum quae maxime nihil! Nobis exercitationem praesentium id blanditiis nostrum
+            asperiores repellendus delectus atque rerum ex tempore aliquid, distinctio maiores?</p>
+    </div>
+    <button class="accordian"> <i class="fas fa-chevron-right"></i>Section 3 </button>
+    <div class="panel">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate ducimus magni quas et obcaecati delectus
+            quasi vel, veniam, repellat dicta magnam, odit odio. Voluptatibus, consequuntur? Molestias repellendus
+            consectetur labore vero, rerum quae maxime nihil! Nobis exercitationem praesentium id blanditiis nostrum
+            asperiores repellendus delectus atque rerum ex tempore aliquid, distinctio maiores?</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName('accordian');
+        var i;
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle ("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display == "inline") {
+                    panel.style.display = "none";
+                }
+                else {
+                    panel.style.display = "inline";
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
