@@ -9,6 +9,7 @@
      #box{width: 100px;
      height: 100px;
      background-color: red;
+     transition: 0.9s;
 
      }
     </style>
@@ -18,18 +19,19 @@
     <div id="box"></div>
      <script>
          let a= 0;
-            let id= setInterval(animate,1000);
+             setInterval(animate,100);
              function animate(){
                a = a+10;
-               if(a==500){
-                   clearInterval(id);
-               }
-               else{ let check = document.getElementById("box");
+            //    if(a==500){
+            //        clearInterval(id);
+            //    }
+                let check = document.getElementById("box");
                check.style.marginLeft= a +'px';
+               check.style.marginTop= a + "px";
                     
                }
               
-             }
+            //  }
      </script>
 </body>
 </html>

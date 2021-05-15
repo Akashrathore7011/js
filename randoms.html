@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /* transition: .5s; */
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"> </div>
+    <script>
+        
+        setInterval(animate,100);
+        function animate(){
+        
+        let x = Math.floor(Math.random()*50);
+        let y = Math.floor(Math.random()*50);
+        let r = Math.floor(Math.random()*255);
+        let g = Math.floor(Math.random()*255);
+        let b = Math.floor(Math.random()*255);
+        
+        let mydivs = document.getElementById("box");
+        mydivs.style.top = y+'%';
+        mydivs.style.left = x+'%';
+        let c = '('+r+','+g+','+b+' )';
+        mydivs.style.background = c;
+    }
+    </script>
+</body>
+</html>
